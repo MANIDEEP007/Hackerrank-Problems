@@ -1,0 +1,17 @@
+def timeConversion(s):
+  '''Function to convert 12 Hour time format to 24 hour time format'''
+  L = s.split(":")
+  ap = s[-2]+s[-1] #Extract AM Or PM
+  L [2] = L[2][0]+L[2][1]
+  L.append(ap)
+  if("AM" in L[3]): #If time is in AM
+    if(int(L[0]) == 12): #To handle 12:00:AM - 12:59AM
+      L[0] = '00'
+    else:
+      if(int(L[0]==12)): #To handle 12:00PM - 12:59PM
+        pass
+      elif(int(L[0])<12):
+        L[0] = str(12+int(L[0]))
+    L = L[:3] #Truncating PM Or AM part
+  return ":".join(L)
+print(timeConversion("07:05:45PM")) # Prints as 19:05:45
