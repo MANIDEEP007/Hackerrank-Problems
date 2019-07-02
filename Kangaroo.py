@@ -5,6 +5,19 @@ The second kangaroo starts at location  and moves at a rate of  meters per jump.
 You have to figure out a way to get both kangaroos at the same location as part of the show.
 Complete the function kangaroo which takes starting location and speed of both kangaroos as input, and return  or  appropriately. Can you determine if the kangaroos will ever land at the same location at the same time? The two kangaroos must land at the same location after making the same number of jumps.
 The link to the problem is https://www.hackerrank.com/challenges/kangaroo/problem
+
+Input Format
+
+A single line of four space-separated integers denoting the respective values of x1,v1 ,x2 , and v2
+
+Sample Input 0
+
+0 3 4 2
+
+Sample Output 0
+
+YES
+
 '''
 import math
 import os
